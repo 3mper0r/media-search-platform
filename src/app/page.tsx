@@ -1,5 +1,3 @@
-"use client";
-
 import SearchBar from "@/components/search/SearchBar";
 import Filters from "@/components/search/Filters";
 import ResultsList from "@/components/search/ResultsList";
@@ -12,8 +10,8 @@ import { Sun, Moon } from "lucide-react";
 import SearchPanel from "@/components/search/SearchPanel";
 
 export default function Home() {
-  const search = useSearch();
-  const [isDarkMode, toggleDarkMode] = useDarkMode();
+  //const search = useSearch();
+  //const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
@@ -57,7 +55,7 @@ export default function Home() {
                 Explore Our Media Library
               </h2>
               <p className="text-gray-500 dark:text-gray-300">
-                Over {search.data?.total || "—"} assets ready for your projects
+                Over 100 assets ready for your projects
               </p>
               <div className="grid grid-cols-1 gap-4">
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center shadow hover:shadow-lg transition">
