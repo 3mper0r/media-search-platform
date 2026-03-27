@@ -12,7 +12,7 @@ A high-performance search system for unstructured media metadata, built with **N
 
 ## 📦 Repository
 
-👉 [Add your GitHub repo link here]
+[👉 \[ GitHub repo link here\]](https://github.com/3mper0r/media-search-platform/)
 
 ---
 
