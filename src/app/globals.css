@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes highlightPulse {
+  0% { background-color: #fef3c7; }
+  50% { background-color: #fde68a; }
+  100% { background-color: #fef3c7; }
+}
+
+.animate-highlight {
+  animation: highlightPulse 1.2s ease-in-out;
+}
+
+
+/* Loader wrapper */
+.loading {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* Fade out */
+.loading-fade-out {
+  opacity: 0;
+}
+
+/* Center text */
+.loading-text {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+}
+
+/* Letters */
+.loading-text span {
+  display: inline-block;
+  /* 👉 MORE SPACING */
+  margin: 0 12px;
+  color: #fff;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+
+  animation: blur-text 1.5s infinite linear alternate;
+}
+
+/* Keyframes */
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(6px);
+    opacity: 0.5;
+  }
+}
