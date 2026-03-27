@@ -4,7 +4,7 @@ export default function Pagination({ data, page, totalPages, setPage }: any) {
       <button
         disabled={page === 1 && !data}
         onClick={() => setPage(page - 1)}
-        className="px-3 py-1 border rounded-xl disabled:opacity-25"
+        className="px-3 py-1 border rounded-xl hover:opacity-70 disabled:opacity-25"
       >
         Prev
       </button>
@@ -14,7 +14,7 @@ export default function Pagination({ data, page, totalPages, setPage }: any) {
       <button
         disabled={page === totalPages || totalPages === 0 && !data}
         onClick={() => setPage(page + 1)}
-        className="px-3 py-1 border rounded-xl disabled:opacity-25"
+        className="px-3 py-1 border rounded-xl hover:opacity-70 disabled:opacity-25"
       >
         Next
       </button>
