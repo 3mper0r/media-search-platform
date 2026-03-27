@@ -8,6 +8,7 @@ import Loader from "@/components/UI/LoaderAnimation";
 import useDarkMode from "@/hooks/useDarkMode";
 import { Sun, Moon } from "lucide-react";
 import SearchPanel from "@/components/search/SearchPanel";
+import { Suspense } from "react";
 
 export default function Home() {
   //const search = useSearch();
@@ -29,8 +30,9 @@ export default function Home() {
       <div className="w-4/5 mx-auto p-6">
         {/* Flex container: left = main content, right = hero card */}
         <div className="flex flex-col lg:flex-row gap-6">
-
+          <Suspense fallback={null}>
             <SearchPanel/>
+          </Suspense>
             {/* Right Column: Stats + News */}
             <div className="w-full lg:w-80 flex flex-col gap-6 lg:mt-16">
             {/* Hot Right Now Card */}
