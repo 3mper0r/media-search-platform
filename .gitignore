@@ -16,3 +16,4 @@ out/
 # Optional: OS files
 .DS_Store
 Thumbs.dbnode_modules/
+node_modules/
