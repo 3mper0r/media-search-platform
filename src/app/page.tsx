@@ -9,6 +9,7 @@ import SortToggle from "@/components/search/SortToggle";
 import Loader from "@/components/UI/LoaderAnimation";
 import useDarkMode from "@/hooks/useDarkMode";
 import { Sun, Moon } from "lucide-react";
+import SearchPanel from "@/components/search/SearchPanel";
 
 export default function Home() {
   const search = useSearch();
@@ -27,69 +28,11 @@ export default function Home() {
           IMAGO
         </span>
       </div>
-      {/* <div className="max-w-5xl mx-auto p-6 mt-6 mb-12 text-center lg:text-left">
-        <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight">
-          Discover, Explore & Inspire
-        </h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-          The ultimate media library for creatives, photographers, and videographers.
-        </p>
-      </div> */}
       <div className="w-4/5 mx-auto p-6">
         {/* Flex container: left = main content, right = hero card */}
         <div className="flex flex-col lg:flex-row gap-6">
 
-          {/* Left: Search, Filters, Results */}
-          <div className="flex-1 space-y-6">
-            {/* Header + Dark Mode */}
-            <div className="flex justify-between items-center">
-              <h1 className="text-2xl font-bold dark:text-gray-100">Media Search</h1>
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 rounded-full transition-colors bg-gray-200 dark:bg-gray-700"
-              >
-                {isDarkMode ? (
-                  <Sun className="w-5 h-5 text-yellow-400" />
-                ) : (
-                  <Moon className="w-5 h-5 text-gray-800" />
-                )}
-              </button>
-            </div>
-
-            {/* Search Bar */}
-            <SearchBar value={search.query} onChange={search.setQuery} />
-
-            {/* Sort + Results Count */}
-            <div className="flex justify-between items-center border-b pb-2">
-              <SortToggle sortOrder={search.sortOrder} setSortOrder={search.setSortOrder} />
-              {search.data && (
-                <div className="text-sm text-gray-500 dark:text-gray-200">
-                  {search.data.total} results
-                </div>
-              )}
-            </div>
-
-            {/* Filters */}
-            <div className="bg-white p-4 rounded-2xl shadow-sm space-y-4 dark:bg-gray-600">
-              <Filters {...search} />
-            </div>
-
-            {/* Results List */}
-            <div className="min-h-[400px]">
-              <ResultsList data={search.data} loading={search.loading} error={search.error} />
-            </div>
-
-            {/* Pagination */}
-            {search.data && (
-              <div className="dark:text-gray-400">
-                <Pagination
-                  page={search.page}
-                  totalPages={search.data.totalPages}
-                  setPage={search.setPage}
-                />
-              </div>
-            )}
-            </div>
+            <SearchPanel/>
             {/* Right Column: Stats + News */}
             <div className="w-full lg:w-80 flex flex-col gap-6 lg:mt-16">
             {/* Hot Right Now Card */}
