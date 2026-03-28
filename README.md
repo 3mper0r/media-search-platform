@@ -6,13 +6,13 @@ A high-performance search system for unstructured media metadata, built with **N
 
 ## 🚀 Live Demo
 
-👉 [https://media-search-platform-xxtr.vercel.app/]
+👉 <https://media-search-platform-xxtr.vercel.app/>
 
 ---
 
 ## 📦 Repository
 
-👉 [https://github.com/3mper0r/media-search-platform/]
+👉 <https://github.com/3mper0r/media-search-platform/>
 
 ---
 
