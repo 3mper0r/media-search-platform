@@ -27,6 +27,8 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row gap-6">
 
           {/* Left — search panel */}
+        <div id="search-anchor" className="scroll-mt-10" />
+
           <Suspense fallback={null}>
             <SearchPanel />
           </Suspense>

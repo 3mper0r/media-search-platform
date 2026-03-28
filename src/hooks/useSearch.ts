@@ -111,6 +111,12 @@ function useSearch() {
     return () => controller.abort();
   }, [debouncedQuery, credit, restrictions, dateFrom, dateTo, sortOrder, page]);
 
+  useEffect(() => {
+  if (!loading) {
+    document.getElementById("search-anchor")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}, [data]); // fires after data updates, not on click
+
   // ── Sync TO URL (replace state) ──────────────────────────
   useEffect(() => {
     const params = new URLSearchParams();
